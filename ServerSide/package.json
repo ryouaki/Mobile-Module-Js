@@ -1,0 +1,16 @@
+{
+  "name": "BicycleGoServer",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "mongodb": "*",
+    "connect-mongo":"*",
+    "express-session": "*",
+    "body-parser":"*"
+  }
+}
