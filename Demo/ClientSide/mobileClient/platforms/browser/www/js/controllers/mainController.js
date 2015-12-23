@@ -8,7 +8,11 @@ moduleJs.createModule('moduleMainView',{
   
   onShowView : function(param) {
     this.param = param;
-    console.log(this);
-    console.log(window.location);
+    document.getElementById('p-message').innerHTML = param.message;
+    addEventTouchStart(document.getElementById('btn-back'), this.onBackBtn);
+  },
+  
+  onBackBtn : function(event) {
+    moduleJs.showView('moduleLoginView',{});
   }
 });

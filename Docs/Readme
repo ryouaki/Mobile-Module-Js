@@ -1,0 +1,39 @@
+API Reference
+
+/*
+ * params
+ * name : moduleObjects
+ * value: {
+ *          mainDiv : main div id,
+ *          modules : {
+ *                      module_name1 : {     
+ *                                   name : module name
+ *                                   controller : the path of controller js file
+ *                                   view : the path of html template  
+ *                      },
+ *          }      
+ *        }
+ */
+moduleJs.init(moduleObjects);
+
+/*
+ * params
+ * name : name
+ * value: the name of module,Must the same as you set on config file.
+ * name : module
+ * value: The function code you want to execute
+ *        For each controller.You can implement your code for initialize on onShowView
+ *        or not.
+ *        The function onShowView will be invoke when the html be display by call the 
+ *        mmoduleJs api showView()
+ */
+createModule(name, module);
+
+/*
+ * params
+ * name : moduleName
+ * value: the name of module you want to display.
+ * name : parameter
+ * value: The data you want to push to next html page.
+ */
+showView(moduleName, parameter);

@@ -1,0 +1,16 @@
+-------------------------EN-----------------------------------------------
+This is used for test with cordova app
+
+If you work on linux .You can execute ./Re-Node.sh to launch this backend app
+
+And I do not know how to execute node app on window os Sorry.
+-------------------------CN-----------------------------------------------
+这里是使用Nodejs实现的restful。
+
+如果你是linux系统，可以直接运行./Re-node.sh
+
+如果你是window系统。请自行百度
+
+这里只是实现一个简单的登录用于演示基于cordova的系统如何与后台交互。
+
+你也可以基于这个后端进一步开发你的应用。

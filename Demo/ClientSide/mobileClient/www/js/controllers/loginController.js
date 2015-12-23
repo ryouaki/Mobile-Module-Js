@@ -4,8 +4,13 @@
  */
 moduleJs.createModule('moduleLoginView',{
   
+  // optional property
   moduleName : 'moduleLoginView',
   
+  /*
+   * onShowView will be invoked at the first time you call the api mmoduleJs.showView
+   * You can do something like initialize UI or others.
+   */
   onShowView : function(param) {
     this.param = param;
     var loginViewTitle = document.getElementById('admin-login-txt-title');
@@ -30,7 +35,10 @@ moduleJs.createModule('moduleLoginView',{
     ,function(reqText, status, xhr){
       console.log(reqText);
       if(reqText.status == '10000') {
-        moduleJs.showView('moduleMainView',{});
+        moduleJs.showView('moduleMainView',{message:'The message from LoginController!'});
+      } else {
+        addClass(strUserName, 'alert-danger');
+        addClass(strPassword, 'alert-danger');
       }
     });
   },

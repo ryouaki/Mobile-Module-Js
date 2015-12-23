@@ -30,7 +30,10 @@ moduleJs.createModule('moduleLoginView',{
     ,function(reqText, status, xhr){
       console.log(reqText);
       if(reqText.status == '10000') {
-        moduleJs.showView('moduleMainView',{});
+        moduleJs.showView('moduleMainView',{message:'The message from LoginController!'});
+      } else {
+        addClass(strUserName, 'alert-danger');
+        addClass(strPassword, 'alert-danger');
       }
     });
   },

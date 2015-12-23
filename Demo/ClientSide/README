@@ -1,0 +1,17 @@
+-------------------------EN-----------------------------------------------
+This is a demo for hybrid base on cordova and build for mobile.
+
+I used Bootstrap and jquery on this app ,And my mvc lib Mobile-Module-JS
+
+This is a simply demo for how to used Mobile-Module-JS on your project
+and how to create a hybrid and talk with restful api.
+
+BTW if you like this lib and demo please click the star at top-right of this page 
+Thank you
+-------------------------CN-----------------------------------------------
+这是一个基于Cordova的手机端hybrid移动应用app
+
+其中使用了UI框架Bootstrap，jquery，以及我自己开发的一个mvc模块化框架mmodulejs。
+
+本程序只是用于演示mmodulejs的演示程序。如果你喜欢请点star
+

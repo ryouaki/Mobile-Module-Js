@@ -13,7 +13,7 @@ moduleJs.init({
   mainDiv : "main-panel", 
   modules: {
     moduleLoginView : {
-      name : "moduleLoginView" ,
+      name : "moduleLoginView" ,    // module name ,Must be the same as you the first parameter you invoke mmoduleJs.createModule
       controller : "js/controllers/loginController.js",
       view : "templates/login.html"
     },

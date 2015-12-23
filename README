@@ -1,0 +1,81 @@
+If you want to run the Demo app on IOS or Android 
+
+You need launch this command line first
+
+$ cordova platform add ios android
+
+-------------------------EN-----------------------------------------------
+This js lib is used to create a modular hybrid quickly.
+
+And there is a simple demo on the folder named Demo,You can also read the API Reference from Docs
+
+This is a simple introduction for how to use mmoduleJs on your project below:
+
+The first we need import jquery into your project,And then add the code like below on your main html file.
+<head>
+...
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/mmodulejs/mmodulejs.js"></script>
+...
+</head>
+<body>
+...
+<script type="text/javascript" src="js/moduleConfig.js"></script>
+<!--moduleConfig.js you can assign another name-->
+</body>
+
+The moduleConfig.js like this:
+
+moduleJs.init({
+  mainDiv : "main-panel",   // This is the id of entry div ,we need display your template html here
+  modules: {
+    moduleLoginView : {     // Module name
+      name : "moduleLoginView" ,   // Controller name,Must the same as module name.
+      controller : "js/controllers/loginController.js", // The path of controller js file
+      view : "templates/login.html"  // The path of template html file
+    },
+    ......
+  }
+});
+
+When we want to display a html on you app,You need invoke this api 
+moduleJs.showView(moduleName,{ paramName:paramData});
+EX.
+moduleJs.showView('moduleLoginView',{title:'Mobile-Module-JS Demo'});
+-------------------------CN-----------------------------------------------
+Demo程序是基于Bootstrap+mmodulejs的一个模块化Hybrid app。
+
+主要用于演示如何使用mmodulejs完成一个模块化的移动端app。
+
+mmodulejs需要依赖于jquery。所以需要和jquery配合使用。首先你需要包含如下代码在你的程序首页
+<head>
+...
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/mmodulejs/mmodulejs.js"></script>
+...
+</head>
+<body>
+...
+<script type="text/javascript" src="js/moduleConfig.js"></script>
+<!--moduleConfig.js你可以使用任意你喜欢的名字-->
+</body>
+
+moduleConfig.js内容如下
+
+moduleJs.init({
+  mainDiv : "main-panel",   // 此item用于指定你界面的主div。所有子页面都是在此div显示。
+  modules: {
+    moduleLoginView : {     // 此为module名，必须与下面name相同与对应*Controller.js中的第一个参数相同
+      name : "moduleLoginView" ,   // controller类名
+      controller : "js/controllers/loginController.js", // controller模块执行代码块,不需要在html界面单独引入
+      view : "templates/login.html"  // 用于显示的html模板
+    },
+    ......
+  }
+});
+
+当我们要显示某一个界面的时候我们只需要执行如下js语句
+moduleJs.showView(模块名,参数);
+EX.
+moduleJs.showView('moduleLoginView',{title:'Mobile-Module-JS Demo'});
+

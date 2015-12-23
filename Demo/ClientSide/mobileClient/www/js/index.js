@@ -37,6 +37,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+      // You can invoke this api for display a template html file.
       moduleJs.showView('moduleLoginView',{title:'Mobile-Module-JS Demo'});
     }
 };
