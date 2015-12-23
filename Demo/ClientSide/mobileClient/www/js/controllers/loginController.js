@@ -8,7 +8,7 @@ moduleJs.createModule('moduleLoginView',{
   moduleName : 'moduleLoginView',
   
   /*
-   * onShowView will be invoked at the first time you call the api mmoduleJs.showView
+   * onShowView will be invoked at the first time you call the api moduleJs.showView
    * You can do something like initialize UI or others.
    */
   onShowView : function(param) {
