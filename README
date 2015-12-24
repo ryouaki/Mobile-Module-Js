@@ -79,3 +79,13 @@ moduleJs.showView(模块名,参数);
 EX.
 moduleJs.showView('moduleLoginView',{title:'Mobile-Module-JS Demo'});
 
+----------------------------Update history------------------------------------
+Ver 20151223 : Upload all source code and docs
+
+----------------------------Plan----------------------------------------------
+1. How to use custom plugin on cordova hybrid app
+
+Contact :
+email :46517115@qq.com
+qq    :46517115
+wechat:lianghui086343
