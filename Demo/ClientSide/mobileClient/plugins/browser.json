@@ -12,6 +12,12 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.cordova.clientSide"
+        },
+        "custom-plugin": {
+            "PACKAGE_NAME": "io.cordova.clientSide"
         }
     },
     "dependent_plugins": {}

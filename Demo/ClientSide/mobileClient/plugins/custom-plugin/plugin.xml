@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="custom-plugin"
+      version="0.0.1">
+    <name>custom-plugin</name>
+    <description>Cordova Custom Plugin</description>
+    <!--
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Whitelist" >
+                <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/WhitelistPlugin.java" target-dir="src/org/apache/cordova/whitelist" />
+		
+        <js-module src="whitelist.js" name="whitelist">
+            <runs />
+        </js-module>
+    </platform>
+    -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="customPlugin">
+                <param name="ios-package" value="CDVCustomPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVCustomPlugin.h" />
+        <source-file src="src/ios/CDVCustomPlugin.m" />
+    	<!-- object class
+        <header-file src="src/ios/CDVFile.h" />
+        <source-file src="src/ios/CDVFile.m" />
+        <header-file src="src/ios/CDVLocalFilesystem.h" />
+        <source-file src="src/ios/CDVLocalFilesystem.m" />
+        <header-file src="src/ios/CDVAssetLibraryFilesystem.h" />
+        <source-file src="src/ios/CDVAssetLibraryFilesystem.m" />
+		-->
+        <!-- ios specific file apis 
+        <js-module src="www/ios/FileSystem.js" name="iosFileSystem">
+            <merges target="FileSystem" />
+        </js-module>
+
+        <js-module src="www/fileSystems-roots.js" name="fileSystems-roots">
+            <runs/>
+        </js-module>
+
+        <js-module src="www/fileSystemPaths.js" name="fileSystemPaths">
+            <merges target="cordova" />
+            <runs/>
+        </js-module>
+        -->
+		<!-- 依赖包 
+        <framework src="AssetsLibrary.framework" />
+        <framework src="MobileCoreServices.framework" />
+        -->
+    </platform>
+	<info>
+		This plugin is used for demo how to create a custom plugin
+	</info>
+
+</plugin>

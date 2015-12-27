@@ -1,0 +1,24 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.cordova.clientSide"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.clientSide"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.cordova.clientSide"
+        },
+        "custom-plugin": {
+            "PACKAGE_NAME": "io.cordova.clientSide"
+        }
+    },
+    "dependent_plugins": {}
+}

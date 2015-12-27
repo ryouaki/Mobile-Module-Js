@@ -1,0 +1,17 @@
+{
+  "name": "custom-plugin",
+  "version": "0.0.1",
+  "description": "Custom plugin",
+  "cordova": {
+    "id": "custom-plugin",  
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    
+  },
+  "keywords": [
+  ],
+  "author": "Ryouaki(46517115@qq.com)"
+}

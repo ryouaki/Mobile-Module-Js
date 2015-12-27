@@ -1,0 +1,15 @@
+/* CSS for login view */
+.admin-login-form {
+    max-width: 450px;
+    padding: 10% 15px 15px;
+    margin: 0px auto;   
+}
+
+.admin-login-form-title {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.admin-login-form-element {
+    margin-bottom: 5px;
+}

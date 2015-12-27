@@ -42,6 +42,60 @@ When we want to display a html on you app,You need invoke this api
 moduleJs.showView(moduleName,{ paramName:paramData});
 EX.
 moduleJs.showView('moduleLoginView',{title:'Mobile-Module-JS Demo'});
+
+·How to create a custom plugin
+refer/Demo/ClientSide/customPlugin Folder structure and create package.json&plugin.xml
+package.json
+{
+  "name": "custom-plugin",  // plugin name
+  "version": "0.0.1",       
+  "description": "Custom plugin",   //
+  "cordova": {
+    "id": "custom-plugin",  // id
+    "platforms": [          // platform
+      "ios"
+    ]
+  },
+  "repository": {           // url
+    
+  },
+  "keywords": [             // 
+  ],
+  "author": "Ryouaki(46517115@qq.com)"  // 
+}
+
+plugin.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="custom-plugin"
+      version="0.0.1">
+    <name>custom-plugin</name>
+    <description>Cordova Custom Plugin</description>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="customPlugin">
+                <param name="ios-package" value="CDVCustomPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVCustomPlugin.h" />
+        <source-file src="src/ios/CDVCustomPlugin.m" />
+    </platform>
+    <info>
+        This plugin is used for demo how to create a custom plugin
+    </info>
+</plugin>
+
+*Notes that we need better copy this two files(package.json&plugin.xml) from other apache plugin
+and create this two files base on it.
+src/
+    ios/
+        CDVCustomPlugin.h
+        CDVCustomPlugin.m
+        
+And then run this command line:
+cordova plugin add ../customPlugin 
+
 -------------------------CN-----------------------------------------------
 Demo程序是基于Bootstrap+mmodulejs的一个模块化Hybrid app。
 
@@ -79,13 +133,65 @@ moduleJs.showView(模块名,参数);
 EX.
 moduleJs.showView('moduleLoginView',{title:'Mobile-Module-JS Demo'});
 
+·如何创建自定义plugin
+参照/Demo/ClientSide/customPlugin的目录结构创建文件夹并创建package.json和plugin.xml
+package.json
+{
+  "name": "custom-plugin",  // plugin名称
+  "version": "0.0.1",       // 版本号
+  "description": "Custom plugin",   // 描述
+  "cordova": {
+    "id": "custom-plugin",  // id
+    "platforms": [          // platform
+      "ios"
+    ]
+  },
+  "repository": {           // url
+    
+  },
+  "keywords": [             // 搜索关键词
+  ],
+  "author": "Ryouaki(46517115@qq.com)"  // 作者信息
+}
+
+plugin.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="custom-plugin"
+      version="0.0.1">
+    <name>custom-plugin</name>
+    <description>Cordova Custom Plugin</description>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="customPlugin">
+                <param name="ios-package" value="CDVCustomPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVCustomPlugin.h" />
+        <source-file src="src/ios/CDVCustomPlugin.m" />
+    </platform>
+    <info>
+        This plugin is used for demo how to create a custom plugin
+    </info>
+</plugin>
+
+*关于package.json&plugin.xml我个人建议是从已经安装的apache的plugin拷贝过来修改
+src/
+    ios/
+        CDVCustomPlugin.h
+        CDVCustomPlugin.m
+
+然后到工程目录执行cordova命令:
+cordova plugin add ../customPlugin 
+
 ----------------------------Update history------------------------------------
 Ver 20151223 : Upload all source code and docs
+Ver 20151228 : Add custom Plugin 
 
 ----------------------------Plan----------------------------------------------
-1. How to use custom plugin on cordova hybrid app
 
-Contact :
+----------------------------Contact-------------------------------------------
 email :46517115@qq.com
 qq    :46517115
 wechat:lianghui086343
